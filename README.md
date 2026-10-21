@@ -8,9 +8,12 @@ Homebrew tap for `asg`, the command-line tool and background daemon for ASG (All
 
 ```sh
 brew tap fellowtechnology/asg
+brew trust fellowtechnology/asg
 brew install asg
 asg version
 ```
+
+Recent Homebrew versions refuse to load formulae from a third-party tap until you trust it. Without `brew trust`, `brew install asg` fails with `Refusing to load formula ... from untrusted tap`.
 
 Start the background daemon (it keeps your session fresh and restarts at login):
 
